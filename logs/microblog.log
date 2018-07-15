@@ -1,0 +1,149 @@
+2018-07-14 20:15:26,400 INFO: Microblog startup [in /home/marvel/skynet/app/__init__.py:89]
+2018-07-14 20:33:40,525 INFO: Microblog startup [in /home/marvel/skynet/app/__init__.py:89]
+2018-07-14 20:36:15,745 INFO: Microblog startup [in /home/marvel/skynet/app/__init__.py:89]
+2018-07-14 20:38:26,076 ERROR: Exception on /export_posts [GET] [in /home/marvel/.local/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/redis/client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/usr/lib/python3.6/site-packages/redis/client.py", line 2749, in _execute_transaction
+    connection.send_packed_command(all_cmds)
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to None:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python3.6/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/marvel/skynet/app/main/routes.py", line 201, in export_posts
+    current_user.launch_task('export_posts', _('Exporting posts...'))
+  File "/home/marvel/skynet/app/models.py", line 178, in launch_task
+    *args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/rq/queue.py", line 300, in enqueue
+    job_id=job_id, at_front=at_front, meta=meta)
+  File "/usr/lib/python3.6/site-packages/rq/queue.py", line 252, in enqueue_call
+    job = self.enqueue_job(job, at_front=at_front)
+  File "/usr/lib/python3.6/site-packages/rq/queue.py", line 325, in enqueue_job
+    pipe.execute()
+  File "/usr/lib/python3.6/site-packages/redis/client.py", line 2894, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/usr/lib/python3.6/site-packages/redis/client.py", line 2749, in _execute_transaction
+    connection.send_packed_command(all_cmds)
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to None:6379. Connection refused.
+2018-07-14 20:41:10,900 INFO: Microblog startup [in /home/marvel/skynet/app/__init__.py:89]
+2018-07-15 13:59:12,392 INFO: Microblog startup [in /home/marvel/skynet/app/__init__.py:89]
+2018-07-15 14:02:35,326 ERROR: Exception on /export_posts [GET] [in /home/marvel/.local/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/redis/client.py", line 2879, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/usr/lib/python3.6/site-packages/redis/client.py", line 2749, in _execute_transaction
+    connection.send_packed_command(all_cmds)
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to None:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 484, in connect
+    sock = self._connect()
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 541, in _connect
+    raise err
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 529, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/marvel/.local/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python3.6/site-packages/flask_login/utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/marvel/skynet/app/main/routes.py", line 201, in export_posts
+    current_user.launch_task('export_posts', _('Exporting posts...'))
+  File "/home/marvel/skynet/app/models.py", line 178, in launch_task
+    *args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/rq/queue.py", line 300, in enqueue
+    job_id=job_id, at_front=at_front, meta=meta)
+  File "/usr/lib/python3.6/site-packages/rq/queue.py", line 252, in enqueue_call
+    job = self.enqueue_job(job, at_front=at_front)
+  File "/usr/lib/python3.6/site-packages/rq/queue.py", line 325, in enqueue_job
+    pipe.execute()
+  File "/usr/lib/python3.6/site-packages/redis/client.py", line 2894, in execute
+    return execute(conn, stack, raise_on_error)
+  File "/usr/lib/python3.6/site-packages/redis/client.py", line 2749, in _execute_transaction
+    connection.send_packed_command(all_cmds)
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 585, in send_packed_command
+    self.connect()
+  File "/usr/lib/python3.6/site-packages/redis/connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to None:6379. Connection refused.
+2018-07-15 14:07:12,261 INFO: Microblog startup [in /home/marvel/skynet/app/__init__.py:89]
+2018-07-15 14:13:03,694 INFO: Microblog startup [in /home/marvel/skynet/app/__init__.py:89]
+2018-07-15 14:18:11,040 INFO: Microblog startup [in /home/marvel/skynet/app/__init__.py:89]
+2018-07-15 14:21:08,093 INFO: Microblog startup [in /home/marvel/skynet/app/__init__.py:89]
